@@ -3,10 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:apiPrzykladowa"
         mc:Ignorable="d"
         Title="Losowy cytat" Height="250" Width="500">
     <Grid>
-        
+        <TextBlock Name="PoradaLabel"
+                   Text="Kliknij aby uzyskać losową poradę!"
+                   Margin="10,10,10,60"
+                   FontSize="16"
+                   TextAlignment="Center"
+                   VerticalAlignment="Top"
+                   TextWrapping="Wrap" />
+        <Button Name="PrzyciskPorady"
+                Content="Losuj porade"
+                Width="150"
+                Height="40" 
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Click="Porada_Click"/>
     </Grid>
 </Window>
