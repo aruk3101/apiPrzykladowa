@@ -21,6 +21,17 @@ namespace apiPrzykladowa
             InitializeComponent();
         }
 
-        
+        private async void Porada_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var losowaPorada = await Porada.LosujPorade();
+                PoradaLabel.Text = $"\"{losowaPorada}\"";
+            }
+            catch (Exception)
+            {
+                PoradaLabel.Text = "Blad pobierania cytatu";
+            }
+        }
     }
 }
